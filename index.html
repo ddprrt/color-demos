@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+	<meta charset="UTF-8">
+	<title>AngularJS Test with HWB Color</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.14/angular.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Fira+Mono' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="main.css">
+</head>
+<body>
+	<div class="demo" ng-init="h=0; w=0; b=0" ng-controller="HWB">
+		background-color: hwb(
+		<input type="text" class="input-color-value" ng-model="h"> <span>deg, </span>
+		<input type="text" class="input-color-value" ng-model="w"> <span>%, </span>
+		<input type="text" class="input-color-value" ng-model="b"> <span>%</span>);
+
+		<div class="output" style="background-color: rgb({{rgb}})"></div>
+	</div>
+
+	<script src="main.js"></script>
+</body>
+</html>
