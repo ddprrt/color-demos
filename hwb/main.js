@@ -55,6 +55,6 @@ function hwbToRgb(hue, white, black) {
 
 function HWB($scope) {
 	ngCreateComputedProperty($scope, 'rgb', '[h,w,b]', function($scope) { 
-		return hwbToRgb(((parseFloat($scope.h) % 360) / 360 * 6), parseFloat($scope.w) / 100, parseFloat($scope.b) / 100).join();
+		return hwbToRgb(((parseFloat($scope.h) % 360) / 360 * 6), parseFloat($scope.w) / 100, parseFloat($scope.b) / 100).join(', ');
 	});
 }
